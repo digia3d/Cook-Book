@@ -17,19 +17,27 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  # comment??
+  host: localhost
+  port: 5432
+  user: postgres
+  password: Maroc 1996
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: Cook_Book_development
+  # database: Cook_Book_development
+  #comment ???
+  database: cook_book
   encoding: unicode
-  pool: 5
+  #comment ???
+  # pool: 5
 
-  username: postgres
-  password: postgres
-
+  # username: postgres
+  # # password: postgres
+  # password: Maroc 1996
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -64,10 +72,11 @@ test:
   <<: *default
   database: Cook_Book_test
   encoding: unicode
-  pool: 5
+  #comment it????
+  # pool: 5
 
-  username: postgres
-  password: postgres
+  # username: postgres
+  # password: postgres
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -92,5 +101,6 @@ test:
 production:
   <<: *default
   database: Cook_Book_production
-  username: Cook_Book
+  #comment it!!!
+  # username: Cook_Book
   password: <%= ENV["COOK_BOOK_DATABASE_PASSWORD"] %>
