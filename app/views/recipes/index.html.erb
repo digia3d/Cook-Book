@@ -1,2 +1,18 @@
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<section class="contRL">
+<h1>Recipes List</h1>
+
+    <div class="list">
+      <% if @recipes.empty? %>
+        <p>There are no recipes.</p>
+      <% else %>
+      <%= render @recipes %>
+      <% end %>
+    </div>
+
+    <% if user_signed_in? %>
+      <div class="actions">
+        <%= link_to "New Recipe", new_recipe_path, class: "btn" %>
+      </div>
+    <% end %>
+</section>
+

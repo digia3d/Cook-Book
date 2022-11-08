@@ -6,7 +6,8 @@ Rails.application.routes.draw do
 
   resources :recipes, except: %i[edit update]
 
-  root to: 'foods#index'
+  #root to: 'foods#index'
+  root to: 'recipes#index'
 
   # post 'authenticate', to: 'authentication#authenticate'
   # Defines the root path route ("/")
