@@ -1,0 +1,9 @@
+<h1>list of foods</h1>
+
+<%= link_to "Add Food", '/foods/new' %>
+
+
+<% @foods.each do |food| %>
+    <h3><%= food.name %> </h3>
+
+<% end %>
