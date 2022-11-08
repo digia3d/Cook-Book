@@ -50,6 +50,10 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+ul {
+  display: flex;
+}
+
 li {
-  padding: 5px;
+  padding: 10px;
 }
