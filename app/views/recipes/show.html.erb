@@ -1,2 +1,27 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<section class="single">
+  <article class="rec">
+    <h1>
+    <%= @recipe.name %>
+    <% if @recipe.public %>
+      <p>Public</p>
+    <% else %>
+      <p>Private</p>
+    <% end %>
+    </h1>
+
+    <ul>
+      <li> Preparation Time: <%= @recipe.preparation_time %> hours <%= @recipe.preparation_time %> minutes 
+      </li>
+      <li> Cooking Time: <%= @recipe.cooking_time %> hours <%= @recipe.cooking_time %> minutes
+      </li>
+    </ul>
+
+    <div class="desc-rec">
+      <h4>Description</h4>
+      <p>
+        <%= @recipe.description %>
+      </p>
+    </div>
+  </article>
+  <%= link_to 'Back', recipes_path %>
+</section>
