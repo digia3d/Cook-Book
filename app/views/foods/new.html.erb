@@ -1,0 +1,13 @@
+
+<h1>Create a Food</h1>
+<%= form_with model: @food  do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name, placeholder: "Name", required: true%>
+  <%= form.label :measurement_unit, "Measurement_unit" %>
+  <%= form.text_area :measurement_unit, placeholder: "Measurement_unit...", required: true %>
+  <%= form.label :price, "Price" %>
+  <%= form.text_area :price, placeholder: "Price", required: true %>
+  <%= form.label :quantity, "Quantity" %> 
+  <%= form.text_area :quantity, placeholder: "Quantity", required: true %>
+  <%= form.submit "Post" %>
+<% end %>
