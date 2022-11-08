@@ -1,4 +1,4 @@
-img {
+.recipe_card_img {
   width: 100px;
   height: 80px;
 }
@@ -33,4 +33,23 @@ img {
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   flex-direction: row;
+}
+
+.single {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+li {
+  padding: 5px;
 }
