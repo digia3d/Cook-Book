@@ -13,7 +13,7 @@ class FoodsController < ApplicationController
 
   def create
     new_food = current_user.foods.new(food_params)
-   
+
     respond_to do |format|
       format.html do
         if new_food.save

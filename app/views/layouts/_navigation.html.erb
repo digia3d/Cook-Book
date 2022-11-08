@@ -1,15 +1,15 @@
 <nav class="flex m-4 justify-between  bg-blue-300">
-  <div class='nav-link'>
+  <div class=''>
     <%= form_with url: root_path, method: :get do %>
-      <button class='logo'>Recipe App</button>
+      <button class=''>Recipe App</button>
     <% end %>
     <% if current_user%>
       <%= form_with url: foods_path, method: :get do %>
-        <button class='list'>Foods</button>
+        <button class=''>Foods</button>
       <% end %>
     <% end %>
   </div>
-  <div class='nav-list'>
+  <div class=''>
     <% unless current_user%>
     <%= form_with model: User.new, url: new_user_session_path, method: :get, class:'log' do %>
       <button> Sign in</button>

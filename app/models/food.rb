@@ -5,10 +5,9 @@ class Food < ApplicationRecord
   validates :name, presence: true, length: { maximum: 250 }
   validates :quantity, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
-
   private
+
   def food_list
     foods.includes([:user])
   end
 end
-  
