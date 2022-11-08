@@ -1,28 +1,14 @@
 <section class="r-form">
   <div>
-    <%= form_with(model: recipe) do |form| %>
+    <%= form_with model: @recipe do |form| %>
       <%= form.text_field :name, placeholder: 'Recipes name' %>
       <%= form.text_field :preparation_time, placeholder: 'Preparation time' %>
       <%= form.text_field :cooking_time, placeholder: 'Cooking time' %>
       <%= form.text_field :description, placeholder: 'Recipes description' %>
       <span><%= form.check_box :public, {}, "true",  "false" %> Make it public</span>
-  </div>
-
-  <% if recipe.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
-
-      <ul>
-        <% recipe.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+        <div class="actions">
+          <%= form.submit %>
+        </div>
   <% end %>
   </div>
   

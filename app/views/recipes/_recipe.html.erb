@@ -1,4 +1,3 @@
-<% @recipes.includes([:user]).each do |recipe| %>
 <div class="recipe-card">
     <div class="recipe_card_image">
         <%=image_tag("Pizza.jpg", alt: "Pizza")%>
@@ -18,4 +17,3 @@
     <%= link_to "View Recipe details", recipe_path(recipe.id) %>
     <%= button_to "Delete Recipe", recipe_path(recipe.id), method: :delete %>
 </div>
-<% end %>
