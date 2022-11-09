@@ -1,14 +1,18 @@
-class RecipesFoodController < ApplicationController
+class RecipeFoodsController < ApplicationController
   def new
-    @user = current_user
-    @recipe = Recipe.find(params[:recipe_id])
-    @food = @user.foods
-    @recipe_foods = RecipeFoods.new
+    recipe = Recipe.find(params[:recipe_id])
+    unless recipe.user == current_user
+      flash[:alert] =
+        'You do not have access to add an ingredient on a recipe that belongs to other Users'
+      return redirect_to recipes_path
+    end
+    @recipe_food = RecipeFood.new
+    @foods = current_user.foods
   end
 
   def create
     @recipe = Recipe.find(params[:recipe_id])
-    @recipe_foods = RecipeFoods.new(recipe_foods_params.merge(recipe_id: @recipe.id))
+    @recipe_foods = RecipeFood.new(recipe_foods_params.merge(recipe_id: @recipe.id))
     if @recipe_foods.save
       redirect_to recipe_path(@recipe)
     else
@@ -18,7 +22,7 @@ class RecipesFoodController < ApplicationController
 
   def destroy
     @recipe = Recipe.find(params[:recipe_id])
-    @recipe_foods = RecipeFoods.find(params[:id])
+    @recipe_foods = RecipeFood.find(params[:id])
     @recipe_foods.destroy
     respond_to do |format|
       format.html { redirect_to recipe_path(@recipe), notice: 'Food was successfully removed.' }

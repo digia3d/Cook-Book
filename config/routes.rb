@@ -4,9 +4,11 @@ Rails.application.routes.draw do
 
   resources :foods, except: %i[edit update]
 
-  resources :recipes, except: %i[edit update]
+  resources :recipes, except: %i[edit update] do
+    resources :recipe_foods, only: %i[new create destroy]
+  end
 
-  #root to: 'foods#index'
+  # root to: 'foods#index'
   root to: 'recipes#index'
 
   # post 'authenticate', to: 'authentication#authenticate'

@@ -38,8 +38,8 @@
     </div>
 
     <div class="ingredientsbtn">
-      <% if @recipe.user == @current_user %>
-        <%= link_to "Add Ingrdients", new_recipe_recipe_foods_path(@recipe.id) %>
+      <% if @recipe.user == current_user %>
+        <%= link_to "Add Ingrdients", new_recipe_recipe_food_path(@recipe.id) %>
       <% end %>
     </div>
 
