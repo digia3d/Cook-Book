@@ -1,0 +1,19 @@
+<div class="recipe-card">
+    <div class="recipe_card_image">
+        <%=image_tag("Pizza.jpg", alt: "Pizza")%>
+    </div>
+    <div class="recipe_card_content">
+        <h3><%= recipe.name %></h3>
+        <p><%= recipe.user.name %></p>
+        <% if recipe.public %>
+            <p>Public</p>
+        <% else %>
+            <p>Private</p>
+        <% end %>
+    </div>
+    <div class="recipe_desc_card">
+        <p><%= recipe.description %></p>
+    </div>
+    <%= link_to "View Recipe details", recipe_path(recipe.id) %>
+    <%= button_to "Delete Recipe", recipe_path(recipe.id), method: :delete %>
+</div>

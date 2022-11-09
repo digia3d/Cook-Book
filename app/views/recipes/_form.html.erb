@@ -1,0 +1,15 @@
+<section class="r-form">
+  <div>
+    <%= form_with model: @recipe do |form| %>
+      <%= form.text_field :name, placeholder: 'Recipes name' %>
+      <%= form.text_field :preparation_time, placeholder: 'Preparation time' %>
+      <%= form.text_field :cooking_time, placeholder: 'Cooking time' %>
+      <%= form.text_field :description, placeholder: 'Recipes description' %>
+      <span><%= form.check_box :public, {}, "true",  "false" %> Make it public</span>
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+  <% end %>
+  </div>
+  
+</section>
