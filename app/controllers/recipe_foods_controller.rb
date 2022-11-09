@@ -12,11 +12,12 @@ class RecipeFoodsController < ApplicationController
 
   def create
     @recipe = Recipe.find(params[:recipe_id])
-    @recipe_foods = RecipeFood.new(recipe_foods_params.merge(recipe_id: @recipe.id))
-    if @recipe_foods.save
-      redirect_to recipe_path(@recipe)
+    recipe_foods = RecipeFood.new(recipe_foods_params)
+    recipe_foods.recipe = @recipe
+    if recipe_foods.save
+      redirect_to recipe_path(@recipe), notice: 'New ingredient was added Succes'
     else
-      render :new
+      flash[:alert] = 'Failed, Please try again!!'
     end
   end
 
@@ -33,6 +34,6 @@ class RecipeFoodsController < ApplicationController
   private
 
   def recipe_foods_params
-    params.require(:recipes_food).permit(:food_id)
+    params.require(:recipe_food).permit(:quantity, :food_id)
   end
 end

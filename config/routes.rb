@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
   # root to: 'foods#index'
   root to: 'recipes#index'
-
+  get '/general_shopping_list', to: 'foods#general'
+  get '/public_recipe', to: 'recipes#public'
   # post 'authenticate', to: 'authentication#authenticate'
   # Defines the root path route ("/")
   # root "articles#index"

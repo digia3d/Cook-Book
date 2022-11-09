@@ -42,7 +42,7 @@
         <%= link_to "Add Ingrdients", new_recipe_recipe_food_path(@recipe.id) %>
       <% end %>
     </div>
-
+    <% if @recipe_foods.length > 0 %>
     <div class="table">
       <table class="table table-striped">
         <thead>
@@ -56,10 +56,19 @@
           </tr>
         </thead>
         <tbody>
-          <%= render partial: "recipe_foods", collection: @recipe_foods %>
+
+          <% @recipe_foods.each do |recipe_food| %>
+          <tr>
+          <td><%= recipe_food.food.name %></td>
+          <td><%= recipe_food.quantity %></td>
+          <td><%= recipe_food.quantity * recipe_food.food.price %></td>
+          </tr>
+          <% end %>
         </tbody>
       </table>
-
+      <% else %>
+        <div>Add some ingrediant</div>
+      <% end %>
     </div>
   </article>
   <button class="back">

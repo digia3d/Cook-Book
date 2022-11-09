@@ -5,7 +5,13 @@
       <%= form.text_field :preparation_time, placeholder: 'Preparation time' %>
       <%= form.text_field :cooking_time, placeholder: 'Cooking time' %>
       <%= form.text_field :description, placeholder: 'Recipes description' %>
-      <span><%= form.check_box :public, {}, "true",  "false" %> Make it public</span>
+       <div class="my-4">
+      <%= form.label :public %><br/>
+      <%= form.label :public, "Yes", value: "true" %>
+      <%= form.radio_button :public, true, checked: true %> &nbsp; &nbsp;
+      <%= form.label :public, "No", value: "false" %>
+      <%= form.radio_button :public, false %>
+    </div>
         <div class="actions">
           <%= form.submit %>
         </div>
