@@ -1,0 +1,23 @@
+<section class="addcont">
+  <h1>Add food for recipes</h1>
+  <div>
+    <%= form_with url: recipe_recipe_foods_path, scope: :recipe_food  do |f| %>
+    <div class="formR">
+      <div>
+        <%= f.label :quantity %>
+        <%= f.number_field :quantity %>
+      </div>
+      <div>
+        <%= f.label :food_id %>
+        <%= f.collection_select(:food_id, @foods, :id, :name) %>
+      </div>
+      <div>
+        <%= f.submit %>
+      </div>
+        <p>
+          Food is not in the list? <%= link_to "Add new food", new_food_path %>
+        </p>
+    </div>
+    <% end %>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+<div>
+<tr>
+  <td> <%= recipe_foods.food.name %> </td>
+  <td> <%= recipe_foods.quantity %> <%= recipe_foods.food.measurment %> </td>
+  <td><%= recipe_foods.food.price * recipe_food.quantity %></td>
+  <% if recipe_foods.recipe.user == current_user %>
+    <td>
+      <%= button_to "Remove", recipe_recipe_foods_path(recipe_foods.recipe_id, recipe_foods.id), method: :delete, data: { confirm: "Are you sure?" } %>
+    </td>
+  <% end %>
+</tr>
+</div>

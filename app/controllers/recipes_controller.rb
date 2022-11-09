@@ -5,6 +5,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    @recipe_foods = RecipeFood.where(recipe_id: @recipe.id)
   end
 
   def new
@@ -31,9 +32,13 @@ class RecipesController < ApplicationController
     redirect_to '/recipes/', notice: 'Post was successfully deleted.'
   end
 
+  def public
+    @recipes = Recipe.where(public: true)
+  end
+
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :description, :ingredients)
+    params.require(:recipe).permit(:name, :description, :ingredients, :public)
   end
 end

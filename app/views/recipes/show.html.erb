@@ -1,2 +1,78 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<section class="single">
+  <article class="rec">
+    <h1 class="h1">
+    <%= @recipe.name %>
+    </h1>
+    <div class="public">
+      <% if @recipe.public %>
+      <div class="form-check form-switch">
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <% else %>
+      <div class="form-check form-switch">
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider round"></span>
+        </label>
+        </div>
+      <% end %>
+      
+    </div>
+
+    
+    <div class="desc-rec">
+    <ul>
+      <li> Preparation Time: <%= @recipe.preparation_time %>  minutes 
+      </li>
+      <li> Cooking Time: <%= @recipe.cooking_time %> minutes
+      </li>
+    </ul>
+      <h4 class="h4">Description</h4>
+
+      <p class="border">
+        <%= @recipe.description %>
+      </p>
+    </div>
+
+    <div class="ingredientsbtn">
+      <% if @recipe.user == current_user %>
+        <%= link_to "Add Ingrdients", new_recipe_recipe_food_path(@recipe.id) %>
+      <% end %>
+    </div>
+    <% if @recipe_foods.length > 0 %>
+    <div class="table">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Food</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Value</th>
+            <% if @recipe.user == @current_user %>
+            <th scope="col">Actions</th>
+            <% end %>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% @recipe_foods.each do |recipe_food| %>
+          <tr>
+          <td><%= recipe_food.food.name %></td>
+          <td><%= recipe_food.quantity %></td>
+          <td><%= recipe_food.quantity * recipe_food.food.price %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <% else %>
+        <div>Add some ingrediant</div>
+      <% end %>
+    </div>
+  </article>
+  <button class="back">
+    <%= link_to 'Back', recipes_path %>
+  </button>
+  
+</section>
