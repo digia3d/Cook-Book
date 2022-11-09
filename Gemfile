@@ -13,9 +13,8 @@ gem 'rails', '~> 7.0.4'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-gem 'cancancan'
+gem 'cancan'
 gem 'ffi'
-
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
@@ -64,6 +63,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
+  gem 'bullet'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

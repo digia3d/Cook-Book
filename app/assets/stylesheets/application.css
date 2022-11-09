@@ -1,6 +1,6 @@
 .recipe_card_img {
-  width: 100px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
 }
 
 .contRL {
@@ -52,8 +52,34 @@
 
 ul {
   display: flex;
+  flex-direction: column;
 }
 
 li {
-  padding: 10px;
+  padding: 0.5rem;
+}
+
+.back {
+  background: rgb(54, 51, 243);
+}
+
+.h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000;
+  padding: 0.5rem;
+}
+
+.h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.border {
+  border-bottom: #000 solid 1px;
 }

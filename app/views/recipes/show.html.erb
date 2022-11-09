@@ -1,27 +1,52 @@
 <section class="single">
   <article class="rec">
-    <h1>
+    <h1 class="h1">
     <%= @recipe.name %>
-    <% if @recipe.public %>
-      <p>Public</p>
-    <% else %>
-      <p>Private</p>
-    <% end %>
     </h1>
+    <div class="public">
+      <% if @recipe.public %>
+      <div class="form-check form-switch">
+        <input
+              class="form-check-input"
+              type="checkbox"
+              id="flexSwitchCheckChecked"
+              checked
+            />
+                <label class="form-check-label" for="flexSwitchCheckChecked">
+                Public
+                </label>
+      </div>
+      <% end %>
+      <% if !@recipe.public %>
+      <div class="form-check form-switch">
+        <input
+              class="form-check-input"
+              type="checkbox"
+              id="flexSwitchCheckChecked"
+            />
+                <label class="form-check-label" for="flexSwitchCheckChecked">
+                Public
+                </label>
+      </div>
+      <% end %>
+    </div>
 
+    
+    <div class="desc-rec">
     <ul>
-      <li> Preparation Time: <%= @recipe.preparation_time %> hours <%= @recipe.preparation_time %> minutes 
+      <li> Preparation Time: <%= @recipe.preparation_time %>  minutes 
       </li>
-      <li> Cooking Time: <%= @recipe.cooking_time %> hours <%= @recipe.cooking_time %> minutes
+      <li> Cooking Time: <%= @recipe.cooking_time %> minutes
       </li>
     </ul>
-
-    <div class="desc-rec">
-      <h4>Description</h4>
-      <p>
+      <h4 class="h4">Description</h4>
+    </div>
+      <p class="border">
         <%= @recipe.description %>
       </p>
-    </div>
   </article>
-  <%= link_to 'Back', recipes_path %>
+  <button class="back">
+    <%= link_to 'Back', recipes_path %>
+  </button>
+  
 </section>
