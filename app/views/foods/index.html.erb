@@ -1,9 +1,24 @@
-<h1>list of foods</h1>
+<h2 class='font-sans mx-4 text-3xl' >list of foods</h2>
 
 <%= link_to "Add Food", '/foods/new' %>
 
-
+<table class="table-auto">
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Measurment unit</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
 <% @foods.each do |food| %>
-    <h3><%= food.name %> </h3>
-
-<% end %>
+    <tr>
+      <td><%= food.name %></td>
+      <td><%= food.measurement_unit %></td>
+      <td><%= food.price %></td>
+      <td>  <%= button_to 'delete', "/foods/#{food.id}/", method: :delete%></td>
+    </tr>
+<% end%>
+  </tbody>
+</table>
