@@ -1,0 +1,23 @@
+<section class="addcont">
+  <h1>Add food for recipes</h1>
+  <div>
+    <%= form_with model: @recipe_foods, url: 
+    recipe_recipe_foods_path(@recipe), local true, html: {"data-turbo": "false"} do |f| %>
+    <div class="formR">
+      <div>
+        <%= f.label :quqntity %>
+        <%= f.number_field :quantity %>
+      </div>
+      <div>
+        <%= f.label :food_id %>
+        <%= f.food_id, options_from_colections_for_select(@foods, :id, :name), {} %>
+      </div>
+      <div>
+        <%= f.submit %>
+      </div>
+        <p>
+          Food is not in the list? <%= link_to "Add new food", new_food_path %>
+        </p>
+    <% end %>
+  </div>
+</section>

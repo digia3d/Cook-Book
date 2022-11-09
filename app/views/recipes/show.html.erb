@@ -39,7 +39,7 @@
 
     <div class="ingredientsbtn">
       <% if @recipe.user == @current_user %>
-        <%= link_to "Add Ingrdients", new_recipe_recipe_food_path(@recipe.id) %>
+        <%= link_to "Add Ingrdients", new_recipe_recipe_foods_path(@recipe.id) %>
       <% end %>
     </div>
 
@@ -49,14 +49,14 @@
           <tr>
             <th scope="col">Food</th>
             <th scope="col">Quantity</th>
-            <th scope="col">Unit</th>
+            <th scope="col">Value</th>
             <% if @recipe.user == @current_user %>
             <th scope="col">Actions</th>
             <% end %>
           </tr>
         </thead>
         <tbody>
-          <%= render partial:"recipe_foods/recipe_food", collection: @recipe.recipe_foods %>
+          <%= render partial: "recipe_foods", collection: @recipe_foods %>
         </tbody>
       </table>
 

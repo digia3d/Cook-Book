@@ -83,3 +83,17 @@ li {
 .border {
   border-bottom: #000 solid 1px;
 }
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ingredientsbtn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
