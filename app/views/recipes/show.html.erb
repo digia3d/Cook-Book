@@ -6,29 +6,20 @@
     <div class="public">
       <% if @recipe.public %>
       <div class="form-check form-switch">
-        <input
-              class="form-check-input"
-              type="checkbox"
-              id="flexSwitchCheckChecked"
-              checked
-            />
-                <label class="form-check-label" for="flexSwitchCheckChecked">
-                Public
-                </label>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
       </div>
-      <% end %>
-      <% if !@recipe.public %>
+      <% else %>
       <div class="form-check form-switch">
-        <input
-              class="form-check-input"
-              type="checkbox"
-              id="flexSwitchCheckChecked"
-            />
-                <label class="form-check-label" for="flexSwitchCheckChecked">
-                Public
-                </label>
-      </div>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider round"></span>
+        </label>
+        </div>
       <% end %>
+      
     </div>
 
     
@@ -40,10 +31,36 @@
       </li>
     </ul>
       <h4 class="h4">Description</h4>
-    </div>
+
       <p class="border">
         <%= @recipe.description %>
       </p>
+    </div>
+
+    <div class="ingredientsbtn">
+      <% if @recipe.user == @current_user %>
+        <%= link_to "Add Ingrdients", new_recipe_recipe_food_path(@recipe.id) %>
+      <% end %>
+    </div>
+
+    <div class="table">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Food</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Unit</th>
+            <% if @recipe.user == @current_user %>
+            <th scope="col">Actions</th>
+            <% end %>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial:"recipe_foods/recipe_food", collection: @recipe.recipe_foods %>
+        </tbody>
+      </table>
+
+    </div>
   </article>
   <button class="back">
     <%= link_to 'Back', recipes_path %>
