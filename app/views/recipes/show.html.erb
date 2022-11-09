@@ -7,14 +7,14 @@
       <% if @recipe.public %>
       <div class="form-check form-switch">
         <label class="switch">
-          <input type="checkbox">
+          <input type="checkbox" checked>
           <span class="slider round"></span>
         </label>
       </div>
       <% else %>
       <div class="form-check form-switch">
         <label class="switch">
-          <input type="checkbox" checked>
+          <input type="checkbox">
           <span class="slider round"></span>
         </label>
         </div>
@@ -37,11 +37,7 @@
       </p>
     </div>
 
-    <div class="ingredientsbtn">
-      <% if @recipe.user == current_user %>
-        <%= link_to "Add Ingrdients", new_recipe_recipe_food_path(@recipe.id) %>
-      <% end %>
-    </div>
+
     <% if @recipe_foods.length > 0 %>
     <div class="table">
       <table class="table table-striped">
@@ -67,7 +63,11 @@
         </tbody>
       </table>
       <% else %>
-        <div>Add some ingrediant</div>
+            <div class="ingredientsbtn">
+      <% if @recipe.user == current_user %>
+        <%= link_to "Add Ingrdients", new_recipe_recipe_food_path(@recipe.id) %>
+      <% end %>
+    </div>
       <% end %>
     </div>
   </article>

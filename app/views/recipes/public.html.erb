@@ -1,10 +1,18 @@
 <h4>Public recipes</h4>
 
 <% @recipes.each do |recipe| %>
-    <div>
+    <div class="pubR">
    
         <p><%= recipe.description %></p>
         <h5><%= recipe.user.name %></h5>
     </div>
+    <div class="recdata">
+        <p><%= recipe.user.name %></p>
+        <% if recipe.public %>
+            <p>Public</p>
+        <% else %>
+            <p>Private</p>
+        <% end %>
+        </div>
 
 <% end %>

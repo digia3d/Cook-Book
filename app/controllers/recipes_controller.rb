@@ -18,9 +18,9 @@ class RecipesController < ApplicationController
     respond_to do |format|
       format.html do
         if new_recipe.save
-          redirect_to '/recipes/', notice: 'Post was successfully created.'
+          redirect_to '/recipes/', notice: 'Recipe was successfully created.'
         else
-          render :new, status: 'Error occured will creating post!'
+          render :new, status: 'Error occured will creating recipe!'
         end
       end
     end
@@ -29,7 +29,7 @@ class RecipesController < ApplicationController
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.delete
-    redirect_to '/recipes/', notice: 'Post was successfully deleted.'
+    redirect_to '/recipes/', notice: 'Recipe was successfully deleted.'
   end
 
   def public
