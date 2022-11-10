@@ -1,8 +1,8 @@
 <section class="single">
   <article class="rec">
-    <h1 class="h1">
+    <h2 class="h1">
     <%= @recipe.name %>
-    </h1>
+    </h2>
     <div class="public">
       <% if @recipe.public %>
       <div class="form-check form-switch">
@@ -49,10 +49,8 @@
           <tr>
             <th scope="col">Food</th>
             <th scope="col">Quantity</th>
-            <th scope="col">Value</th>
-            <% if @recipe.user == @current_user %>
+            <th scope="col">Value</th> 
             <th scope="col">Actions</th>
-            <% end %>
           </tr>
         </thead>
         <tbody>
@@ -62,6 +60,10 @@
           <td><%= recipe_food.food.name %></td>
           <td><%= recipe_food.quantity %></td>
           <td><%= recipe_food.quantity * recipe_food.food.price %></td>
+          <td>
+          <% if current_user == recipe_food.recipe.user %>
+                  <%= button_to 'Remove', recipe_recipe_food_path(@recipe, recipe_food), method: :delete, class: "bg-red-300 px-2 py-1 rounded-lg hover:bg-red-500 hover:text-white" %>
+          <% end %></td>
           </tr>
           <% end %>
         </tbody>
