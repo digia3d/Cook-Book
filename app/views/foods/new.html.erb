@@ -1,4 +1,4 @@
-
+<div class="createfood">
 <h1>Create a Food</h1>
 <%= form_with model: @food  do |form| %>
   <%= form.label :name, "Name" %>
@@ -11,3 +11,4 @@
   <%= form.text_area :quantity, placeholder: "Quantity", required: true %>
   <%= form.submit "Post" %>
 <% end %>
+</div>

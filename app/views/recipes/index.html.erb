@@ -1,6 +1,12 @@
-<section class="contRL">
-<h1>Recipes List</h1>
-
+<section >
+<div class="contRL">
+<h1 class="Rtitle">Recipes List</h1>
+    <% if user_signed_in? %>
+      <div class="actions">
+        <%= link_to "Add New Recipe", new_recipe_path, class: "btn" %>
+      </div>
+    <% end %>
+    </div>
     <div class="list">
       <% if @recipes.empty? %>
         <p>There are no recipes.</p>
@@ -9,10 +15,6 @@
       <% end %>
     </div>
 
-    <% if user_signed_in? %>
-      <div class="actions">
-        <%= link_to "New Recipe", new_recipe_path, class: "btn" %>
-      </div>
-    <% end %>
+
 </section>
 
