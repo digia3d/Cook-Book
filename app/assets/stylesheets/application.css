@@ -310,7 +310,7 @@ input:checked + .slider::before {
 
 .pubrecipe-card {
   display: flex;
-  width: 100%;
+  width: 70%;
   height: auto;
   background-color: #fff;
   border-radius: 5px;
@@ -320,12 +320,38 @@ input:checked + .slider::before {
   flex-direction: column;
 }
 
+.pubrecipe-card h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000;
+  padding: 0.5rem;
+  text-align: center;
+}
+
 .pubR {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 10px;
   width: 100%;
   margin-top: 20px;
+}
+
+.rPub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 50%;
+  margin: 20px;
+}
+
+.p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+  flex-direction: column;
 }

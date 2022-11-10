@@ -1,18 +1,19 @@
-<h4>Public recipes</h4>
+<section class="pubR ">
+    <div class="pubrecipe-card ">
+        <h1>Public recipes</h1>
 
-<% @recipes.each do |recipe| %>
-    <div class="pubR">
-   
-        <p><%= recipe.description %></p>
-        <h5><%= recipe.user.name %></h5>
-    </div>
-    <div class="recdata">
-        <p><%= recipe.user.name %></p>
-        <% if recipe.public %>
-            <p>Public</p>
-        <% else %>
-            <p>Private</p>
+        <div class="rPub">
+        <% @recipes.each do |recipe| %>
+            <div class="pubR">
+                <h4><%= recipe.name %></h4>
+                <h5>by <%= recipe.user.name %></h5>
+            </div>
+            <div class="p">
+                <p> Item:<%= recipe.foods.count %> </p>
+                <p> total:<%= @total %>    </p>
+            </div>
         <% end %>
         </div>
 
-<% end %>
+    </div>
+</section>
