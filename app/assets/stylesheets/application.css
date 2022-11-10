@@ -144,9 +144,21 @@ form button {
 
 .ingredientsbtn {
   display: flex;
+  width: fit-content;
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  color: rgb(24, 70, 221);
+  text-decoration: underline;
+}
+
+.ingredientsbtn {
+  transition-duration: 0.4s;
+}
+
+.ingredientsbtn:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
 }
 
 .table {
@@ -205,7 +217,7 @@ input {
 
 .slider::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 26px;
   width: 26px;
   left: 4px;
