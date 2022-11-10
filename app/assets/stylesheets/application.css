@@ -338,3 +338,25 @@ input:checked + .slider::before {
   width: 100%;
   margin-top: 20px;
 }
+
+.create {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 70%;
+  margin-top: 20px;
+  border: #ccc solid 1px;
+  box-shadow: #ccc 0 0 10px;
+}
+
+.new h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.new a {
+  text-decoration: none;
+  color: rgb(24, 30, 224);
+}
