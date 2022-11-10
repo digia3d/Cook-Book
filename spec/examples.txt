@@ -1,0 +1,17 @@
+example_id                           | status | run_time        |
+------------------------------------ | ------ | --------------- |
+./spec/models/food_spec.rb[1:1:1]    | passed | 0.01289 seconds |
+./spec/models/food_spec.rb[1:1:2]    | passed | 0.00201 seconds |
+./spec/models/recipe_spec.rb[1:1]    | passed | 0.01586 seconds |
+./spec/models/recipe_spec.rb[1:2]    | passed | 0.01713 seconds |
+./spec/models/recipe_spec.rb[1:3]    | passed | 0.02049 seconds |
+./spec/models/recipe_spec.rb[1:4]    | passed | 0.02376 seconds |
+./spec/models/recipe_spec.rb[1:5]    | passed | 0.03334 seconds |
+./spec/models/recipe_spec.rb[1:6]    | passed | 0.02025 seconds |
+./spec/models/user_spec.rb[1:1]      | passed | 0.01641 seconds |
+./spec/models/user_spec.rb[1:2]      | passed | 0.01582 seconds |
+./spec/models/user_spec.rb[1:3]      | passed | 0.01595 seconds |
+./spec/models/user_spec.rb[1:4]      | passed | 0.05006 seconds |
+./spec/models/user_spec.rb[1:5]      | passed | 0.01653 seconds |
+./spec/request/public_spec.rb[1:1:1] | passed | 0.00493 seconds |
+./spec/request/public_spec.rb[1:1:2] | passed | 0.1489 seconds  |
