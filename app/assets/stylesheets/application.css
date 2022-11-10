@@ -150,9 +150,6 @@ form button {
   gap: 20px;
   color: rgb(24, 70, 221);
   text-decoration: underline;
-}
-
-.ingredientsbtn {
   transition-duration: 0.4s;
 }
 
