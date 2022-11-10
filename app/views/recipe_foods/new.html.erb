@@ -1,23 +1,18 @@
-<section class="addcont">
-  <h2>Add food for recipes</h2>
-  <div>
-    <%= form_with url: recipe_recipe_foods_path, scope: :recipe_food  do |f| %>
-    <div class="formR">
-      <div>
-        <%= f.label :quantity %>
-        <%= f.number_field :quantity %>
-      </div>
-      <div>
-        <%= f.label :food_id %>
-        <%= f.collection_select(:food_id, @foods, :id, :name) %>
-      </div>
-      <div>
-        <%= f.submit %>
-      </div>
-        <p>
-          Food is not in the list? <%= link_to "Add new food", new_food_path %>
-        </p>
+<div class="flex justify-center">
+  <%= form_with url: recipe_recipe_foods_path, scope: :recipe_food, class: "bg-white rounded-lg p-4 my-16 w-96" do |form| %>
+    <p class="text-lg font-bold text-center mb-4">Add Ingredient</p>
+    <div class="my-4 flex justify-between">
+      <%= form.label :quantity, "Quantity", placeholder: 0 %>
+      <%= form.number_field :quantity, class: "bg-blue-100 p-2 rounded-md" %>
     </div>
-    <% end %>
-  </div>
-</section>
+    <div class="my-4 flex justify-between">
+      <%= form.label :food_id, "Food" %>
+      <div class="bg-gray-200 p-2 rounded-md">
+        <%= form.collection_select(:food_id, @foods, :id, :name) %>
+      </div>
+    </div>
+    <div class="text-center bg-green-300 hover:bg-green-100 py-2 rounded-lg hover:shadow-lg">
+      <%= form.submit "Add Ingredient" %>
+    </div>
+  <% end %>
+</div>
