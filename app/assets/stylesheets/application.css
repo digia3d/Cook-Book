@@ -1,0 +1,362 @@
+.recipe_card_img {
+  width: 250px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.contRL {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.Rtitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+}
+
+.recipe-card {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+}
+
+.recipe_card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 100px;
+}
+
+.recipe_desc_card {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.recipe_card_content a {
+  text-decoration: none;
+  color: rgb(24, 30, 224);
+}
+
+.recdata {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.single {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  padding: 0.5rem;
+}
+
+.back {
+  background: rgb(54, 51, 243);
+}
+
+.actions {
+  color: blue;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000;
+  padding: 0.5rem;
+}
+
+.h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.border {
+  border-bottom: #000 solid 1px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form button {
+  background: rgb(54, 51, 243);
+}
+
+.ingredientsbtn {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  color: rgb(24, 70, 221);
+  text-decoration: underline;
+  transition-duration: 0.4s;
+}
+
+.ingredientsbtn:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.table-striped {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-check {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+input {
+  border: #ccc solid 1px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(33, 150, 243);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(33, 150, 243);
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+.foodL {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.foodL a {
+  text-decoration: none;
+  color: rgb(24, 30, 224);
+}
+
+.Sign-up,
+.LogIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#new_user {
+  margin-top: 20px;
+  border: #ccc solid 1px;
+  box-shadow: #ccc 0 0 10px;
+  align-items: center;
+}
+
+.r-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.backToR {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.createfood {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.pubrec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.pubrecipe-card {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+}
+
+.pubR {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.create {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 70%;
+  margin-top: 20px;
+  border: #ccc solid 1px;
+  box-shadow: #ccc 0 0 10px;
+}
+
+.new h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.new a {
+  text-decoration: none;
+  color: rgb(24, 30, 224);
+}

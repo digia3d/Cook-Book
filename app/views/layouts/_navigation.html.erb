@@ -1,0 +1,44 @@
+<nav class="flex sm:justify-between items-center space-x-4 bg-black  py-3 "  bg-blue-300">
+  <div class='flex sm:justify-between space-x-4'>
+    <%= form_with url: root_path, method: :get do %>
+      <h1 class='text-3xl py-2 px-4 font-serif text-white font-semibold'>Cook Book</h1>
+    <% end %>
+    <% if current_user%>
+      <%= form_with url: foods_path, method: :get do %>
+        <button class='text-2xl  py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>Foods</button>
+      <% end %>
+    <% end %>
+     <% if current_user%>
+      <%= form_with url: recipes_path, method: :get do %>
+        <button class='text-2xl py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>Recipes</button>
+      <% end %>
+    <% end %>
+      <%= form_with url: public_recipe_path, method: :get do %>
+        <button class='text-2xl py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>Public Recipes</button>
+      <% end %>
+        <% if current_user%>
+      <%= form_with url: general_shopping_list_path, method: :get do %>
+        <button class='text-2xl py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>Shoping List</button>
+      <% end %>
+    <% end %>
+  </div>
+  <div class='flex sm:justify-between space-x-4'>
+    <% unless current_user%>
+    <%= form_with model: User.new, url: new_user_session_path, method: :get, class:'log' do %>
+      <button class='text-2xl py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'> Sign in</button>
+    <% end %>
+    <%= form_with model: User.new, url: new_user_registration_path, method: :get, class:'log' do %>
+      <button class='text-2xl py-2 mr-3 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>Sign up</button>
+    <% end %>
+  <% end %>
+  <% if current_user %>
+    <%=form_with model: User.new, url: destroy_user_session_path, data: { turbo_method: :delete },
+class:'sign-out' do %> 
+      <button class='text-2xl py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>Sign out</button>
+    <% end %>
+    <span class='alert'>
+     <p class='text-2xl py-2 mr-3 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-teal-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>Welcome <%= current_user.name%></p>
+    </span>
+  <% end %>
+  </div>
+</nav>
