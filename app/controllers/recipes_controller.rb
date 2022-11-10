@@ -1,14 +1,14 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.all.includes([:user])
   end
 
   def show
     @recipe = Recipe.find(params[:id])
-    @recipe_foods = RecipeFood.where(recipe_id: @recipe.id)
+    @recipe_foods = RecipeFood.where(recipe_id: @recipe.id).includes([:food])
   end
 
-  def new
+  def new 
     @recipe = Recipe.new
   end
 
