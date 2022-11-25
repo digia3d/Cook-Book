@@ -1,0 +1,18 @@
+databases:
+  - name: Cook-Book
+    databaseName: Cook_Book_development
+    user: aleksandra
+
+services:
+  - type: web
+    name: Cook-Book
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: Cook_Book_development
+          property: connectionString
+      - key:754bea2ff5273a375f2e47b1dab5aacc
+        sync: false
