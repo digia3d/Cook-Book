@@ -100,7 +100,7 @@ production:
 #
 production:
   <<: *default
-  database: Cook_Book_production
+  url: <%= ENV['DATABASE_URL'] %>
   #comment it!!!
   username: Cook_Book
   password: <%= ENV["COOK_BOOK_DATABASE_PASSWORD"] %>
