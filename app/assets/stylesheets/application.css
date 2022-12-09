@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;1,300&family=Playfair+Display:ital,wght@1,600;1,800&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  color: #2c1915;
+}
+
+html {
+  background-image: url('https://cdn.pixabay.com/photo/2018/03/02/13/38/vegetables-3193197__480.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  background-position-x: left;
+  background-position-y: top;
+}
+
 .recipe_card_img {
   width: 250px;
   height: 200px;
@@ -9,12 +24,102 @@
   gap: 10px;
 }
 
+.nav__bar__main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(136, 64, 33);
+  font-family: 'Domine', serif;
+  font-weight: 700;
+}
+
+.nav__div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.cook__book {
+  color: rgb(236, 240, 235);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.foods__btn,
+.recipes__btn,
+.public__btn,
+.shop__btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: rgb(136, 64, 33);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #f7faf7;
+  border-radius: 0.45rem;
+}
+
+.signIn__btn,
+.signUp__btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: rgb(245, 251, 245);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #82bd82;
+  border: 1px solid rgb(15, 82, 16);
+  border-radius: 0.45rem;
+}
+
+.signOut__btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: rgb(245, 251, 245);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #dd0620;
+  border: 1px solid rgb(15, 82, 16);
+  border-radius: 0.45rem;
+}
+
+.foods__btn:hover,
+.recipes__btn:hover,
+.public__btn:hover,
+.shop__btn:hover,
+.signIn__btn:hover,
+.signUp__btn:hover,
+.signOut__btn:hover {
+  background-color: #fdab41;
+  color: rgb(245, 251, 245);
+}
+
 .contRL {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.welcome {
+  font-size: x-large;
+  font-weight: bold;
+  color: rgb(245, 251, 245);
 }
 
 .Rtitle {
@@ -29,15 +134,22 @@
   margin: 20px;
 }
 
+.log__div,
+.sign__up {
+  background: #f6b34886;
+  border: #ccc solid 1px;
+  box-shadow: #ccc 0 0 10px;
+}
+
 .recipe-card {
   display: flex;
   width: 100%;
   height: auto;
-  background-color: #fff;
+  background-color: #dbc883e4;
   border-radius: 5px;
   padding: 20px;
   margin: 10px auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(44, 25, 21, 0.795);
   flex-direction: row;
 }
 
@@ -58,7 +170,7 @@
 
 .recipe_card_content a {
   text-decoration: none;
-  color: rgb(24, 30, 224);
+  color: #216508;
 }
 
 .recdata {
@@ -73,13 +185,18 @@
   gap: 20px;
   width: 70%;
   height: 100%;
-  background-color: #fff;
+  background-color: #ccd463c9;
   border-radius: 5px;
   padding: 20px;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgb(44, 25, 21);
+}
+
+.shopping__list {
+  background-color: #ccd463c9;
+  box-shadow: 0 0 10px rgb(44, 25, 21);
 }
 
 ul {
@@ -92,13 +209,14 @@ li {
 }
 
 .back {
-  background: rgb(54, 51, 243);
+  background: #678a11;
 }
 
-.actions {
-  color: blue;
+.actions > input {
+  color: #2c1915;
   font-weight: bold;
   padding-bottom: 10px;
+  border: #ccc solid 1px;
 }
 
 .h4 {
@@ -113,7 +231,7 @@ li {
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.2;
-  color: #000;
+  color: #2c1915;
   padding: 0.5rem;
   text-align: center;
 }
@@ -127,8 +245,44 @@ h1 {
   text-align: center;
 }
 
+.py-2 {
+  background: #fea210 !important;
+  width: 100% !important;
+}
+
+form button {
+  background: #678a11;
+}
+
 .border {
-  border-bottom: #000 solid 1px;
+  border: #2c1915 solid 1px !important;
+}
+
+.table,
+.table-striped,
+td {
+  border: #2c1915 solid 1px;
+  background: white;
+}
+
+.w-full > thead {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+#recipe_food_food_id {
+  background: #c19277 !important;
+}
+
+#recipe_food_quantity {
+  background: #8eed93 !important;
+}
+
+.bg-red-300 {
+  background: #ce0909 !important;
+}
+
+.bg-red-300:hover {
+  background: #ea8f4e !important;
 }
 
 form {
@@ -138,23 +292,19 @@ form {
   gap: 20px;
 }
 
-form button {
-  background: rgb(54, 51, 243);
-}
-
 .ingredientsbtn {
   display: flex;
   width: fit-content;
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  color: rgb(24, 70, 221);
+  color: #678a11;
   text-decoration: underline;
   transition-duration: 0.4s;
 }
 
 .ingredientsbtn:hover {
-  background-color: #4caf50; /* Green */
+  background-color: #c0a961; /* Green */
   color: white;
 }
 
@@ -168,7 +318,7 @@ form button {
 }
 
 .table-striped {
-  background-color: #fff;
+  background-color: #cdd463;
   border-radius: 5px;
   padding: 20px;
   margin: 0 auto;
@@ -190,10 +340,6 @@ form button {
   height: 34px;
 }
 
-input {
-  border: #ccc solid 1px;
-}
-
 .switch input {
   opacity: 0;
   width: 0;
@@ -207,7 +353,7 @@ input {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #cdd463;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -225,11 +371,11 @@ input {
 }
 
 input:checked + .slider {
-  background-color: rgb(33, 150, 243);
+  background-color: #678a11;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px rgb(33, 150, 243);
+  box-shadow: 0 0 1px #678a11;
 }
 
 input:checked + .slider::before {
@@ -258,7 +404,7 @@ input:checked + .slider::before {
 
 .foodL a {
   text-decoration: none;
-  color: rgb(24, 30, 224);
+  color: #678a11;
 }
 
 .Sign-up,
@@ -270,13 +416,13 @@ input:checked + .slider::before {
   gap: 10px;
   width: 100%;
   margin-top: 20px;
+  color: #2c1915;
 }
 
 #new_user {
   margin-top: 20px;
-  border: #ccc solid 1px;
-  box-shadow: #ccc 0 0 10px;
   align-items: center;
+  color: #2c1915;
 }
 
 .r-form {
@@ -296,6 +442,18 @@ input:checked + .slider::before {
   gap: 10px;
   width: 100%;
   margin-top: 20px;
+}
+
+.backToR > a {
+  text-decoration: none;
+  color: #a3e90b !important;
+  font-weight: 700 !important;
+  font-size: 1.3rem;
+}
+
+.btn {
+  color: #3c5409 !important;
+  font-weight: 700;
 }
 
 .createfood {
@@ -321,7 +479,7 @@ input:checked + .slider::before {
   display: flex;
   width: 100%;
   height: auto;
-  background-color: #fff;
+  background-color: #e1dd9bcf !important;
   border-radius: 5px;
   padding: 20px;
   margin: 10px auto;
@@ -339,6 +497,10 @@ input:checked + .slider::before {
   margin-top: 20px;
 }
 
+.bg-orange-200 {
+  background-color: #b57753cf !important;
+}
+
 .create {
   display: flex;
   flex-direction: column;
@@ -347,8 +509,8 @@ input:checked + .slider::before {
   gap: 10px;
   width: 70%;
   margin-top: 20px;
-  border: #ccc solid 1px;
-  box-shadow: #ccc 0 0 10px;
+  border: brown solid 1px;
+  box-shadow: #fea210 0 0 10px;
 }
 
 .new h2 {
@@ -358,5 +520,5 @@ input:checked + .slider::before {
 
 .new a {
   text-decoration: none;
-  color: rgb(24, 30, 224);
+  color: #678a11;
 }

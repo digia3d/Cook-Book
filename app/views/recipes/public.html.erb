@@ -5,7 +5,7 @@
       <% @public_recipes.each do |recipe| %>
         <li class="bg-white rounded-lg flex justify-between items-center w-[60%] my-2 py-2 px-4 border-2 border-gray-400 hover:shadow-xl">
           <div class="p-2">
-            <div class="mb-2 text-blue-600 hover:text-blue-300 text-xl font-bold">
+            <div class="mb-2 text-green-600 hover:text-green-300 text-xl font-bold">
               <%= link_to recipe.name, recipe_path(recipe) %>
             </div>
             By: <span class="font-bold"><%= recipe.user.name %></span>
