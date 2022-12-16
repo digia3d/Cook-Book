@@ -33,10 +33,10 @@ development:
   #database: cook_book
   #encoding: unicode
   #comment ???
-  #pool: 5
+  pool: 5
 
-  #username: aleksandra
-  #password: postgres
+  username: aleksandra
+  password: postgres
   # password: Maroc 1996
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -73,10 +73,10 @@ test:
   database: Cook_Book_test
   encoding: unicode
   #comment it????
-  #pool: 5
+  pool: 5
 
-  #username: aleksandra
-  #password: postgres
+  username: aleksandra
+  password: postgres
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
